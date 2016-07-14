@@ -1,6 +1,5 @@
 var fs = require('fs');
 var path = require('path');
-var xml2js = require('xml2js');
 var ig = require('imagemagick');
 var colors = require('colors');
 var _ = require('underscore');
