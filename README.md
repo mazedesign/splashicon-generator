@@ -63,16 +63,33 @@ Include in your ```config.xml``` file:
     <icon height="120" src="res/icons/ios/icon-60-2x.png" width="120" />
     <icon height="76" src="res/icons/ios/icon-76.png" width="76" />
     <icon height="152" src="res/icons/ios/icon-76-2x.png" width="152" />
+    <icon height="228" src="res/icons/ios/icon-76-3x.png" width="228" />
     <icon height="40" src="res/icons/ios/icon-40.png" width="40" />
     <icon height="80" src="res/icons/ios/icon-40-2x.png" width="80" />
+    <icon height="120" src="res/icons/ios/icon-40-3x.png" width="120" />
     <icon height="57" src="res/icons/ios/icon-57.png" width="57" />
     <icon height="114" src="res/icons/ios/icon-57-2x.png" width="114" />
+    <icon height="171" src="res/icons/ios/icon-57-3x.png" width="171" />
     <icon height="72" src="res/icons/ios/icon-72.png" width="72" />
     <icon height="144" src="res/icons/ios/icon-72-2x.png" width="144" />
+    <icon height="216" src="res/icons/ios/icon-72-3x.png" width="216" />
     <icon height="29" src="res/icons/ios/icon-small.png" width="29" />
     <icon height="58" src="res/icons/ios/icon-small-2x.png" width="58" />
+    <icon height="87" src="res/icons/ios/icon-small-3x.png" width="87" />
     <icon height="50" src="res/icons/ios/icon-50.png" width="50" />
     <icon height="100" src="res/icons/ios/icon-50-2x.png" width="100" />
+    <icon height="150" src="res/icons/ios/icon-50-3x.png" width="150" />
+    <icon height="48" src="res/icons/ios/icon-48.png" width="48" />
+    <icon height="96" src="res/icons/ios/icon-48-2x.png" width="96" />
+    <icon height="58" src="res/icons/ios/icon-58.png" width="58" />
+    <icon height="116" src="res/icons/ios/icon-58-2x.png" width="116" />
+    <icon height="174" src="res/icons/ios/icon-58-3x.png" width="174" />
+    <icon height="64" src="res/icons/ios/icon-64.png" width="64" />
+    <icon height="128" src="res/icons/ios/icon-64-2x.png" width="128" />
+    <icon height="192" src="res/icons/ios/icon-64-3x.png" width="192" />
+    <icon height="83.5" src="res/icons/ios/icon-83.5.png" width="83.5" />
+    <icon height="167" src="res/icons/ios/icon-83.5-2x.png" width="167" />
+    <icon height="320" src="res/icons/ios/icon-320.png" width="320" />
 </platform>
 <platform name="windows">
     <icon height="150" src="res/icons/windows/Square150x150Logo.scale-100.png" width="150" />
