@@ -37,6 +37,16 @@ Should be a 1024x1024px with a 5% margin.
 Your splash must be 2732x2732px as it now is the largest resolution (used by iPad Pro 12.9"), and the artwork should fit a center square (1200x1200px).
 This Photoshop splash screen template provides the recommended size and guidelines of the artwork’s safe zone.
 
+#### Platform specific assets
+
+You can provide a platform-specific icon by creating a subfolder with the name of the platform.
+
+- model
+    - icon.png      // Default icon used for all platforms if not overriden.
+    - splash.png    // Default splash used for all platforms if not overriden.
+    - android
+        - icon.png  // Override the default icon for the 'android' platform. So you can use an icon with alpha, as apple doens't allow.
+
 ---
 
 ### Requirements

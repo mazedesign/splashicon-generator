@@ -268,8 +268,13 @@ var generateIcon = function (platform, icon) {
         if (!fs.existsSync(filedirName)) {
             nodeFs.mkdirSync(filedirName, '0777', true);
         }
+        var srcPath = settings.ICON_FILE;
+        var platformIconPath = path.join(path.dirname(srcPath), platform.name, path.basename(srcPath));
+        if (fs.existsSync(platformIconPath)) {
+            srcPath = platformIconPath;
+        }
         ig.resize({
-            srcPath: settings.ICON_FILE,
+            srcPath: srcPath,
             dstPath: filePath,
             quality: 1,
             format: icon.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
@@ -371,8 +376,13 @@ var generateSplash = function (platform, splash) {
         if (!fs.existsSync(filedirName)) {
             nodeFs.mkdirSync(filedirName, '0777', true);
         }
+        var srcPath = settings.SPLASH_FILE;
+        var platformIconPath = path.join(path.dirname(srcPath), platform.name, path.basename(srcPath));
+        if (fs.existsSync(platformIconPath)) {
+            srcPath = platformIconPath;
+        }
         ig.crop({
-            srcPath: settings.SPLASH_FILE,
+            srcPath: srcPath,
             dstPath: filePath,
             quality: 1,
             format: splash.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
