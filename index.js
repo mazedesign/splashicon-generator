@@ -12,7 +12,7 @@ var nodeFs = require('node-fs');
  * @param  {String} projectName
  * @return {Promise} resolves with an array of platforms
  */
-var getPlatformIcons = function() {
+var getPlatformIcons = function () {
     var deferred = Q.defer();
     var platforms = [];
     //ok
@@ -23,47 +23,50 @@ var getPlatformIcons = function() {
         icons: [
             // Default icon (avoid Apple submit error ITMS-90032)
             { name: "../../../icon.png", size: 57 },
-            // iOS 8.0+, iPhone 6 Plus
-            { name:'icon-60-3x.png', size:180 },
+            { name: 'icon-57.png', size: 57 },
             // iOS 7.0+, iPhone / iPod Touch  -->
-            { name:'icon-60.png', size:60 },
-            { name:'icon-60-2x.png', size:120 },
+            { name: 'icon-60.png', size: 60 },
+            // iPhone 6s, iPhone 6, iPhone SE
+            { name: 'icon-60-2x.png', size: 120 },
+            // iOS 8.0+, iPhone 6s Plus, iPhone 6 Plus
+            { name: 'icon-60-3x.png', size: 180 },
             // iPad -->
-            { name:'icon-76.png', size:76 },
-            { name:'icon-76-2x.png', size:152 },
-            { name:'icon-76-3x.png', size:228 },
+            { name: 'icon-76.png', size: 76 },
+            // iPad, iPad mini
+            { name: 'icon-76-2x.png', size: 152 },
             // iOS 6.1, Spotlight Icon -->
-            { name:'icon-40.png', size:40 },
-            { name:'icon-40-2x.png', size:80 },
-            { name:'icon-40-3x.png', size:120 },
+            { name: 'icon-40.png', size: 40 },
+            { name: 'icon-40-2x.png', size: 80 },
+            { name: 'icon-40-3x.png', size: 120 },
             // iPhone / iPod Touch -->
-            { name:'icon-57.png', size:57 },
-            { name:'icon-57-2x.png', size:114 },
-            { name:'icon-57-3x.png', size:171 },
+            { name: 'icon-57-2x.png', size: 114 },
             // iPad -->
-            { name:'icon-72.png', size:72 },
-            { name:'icon-72-2x.png', size:144 },
-            { name:'icon-72-3x.png', size:216 },
+            { name: 'icon-72.png', size: 72 },
+            { name: 'icon-72-2x.png', size: 144 },
             // iPhone Spotlight and Settings Icon -->
-            { name:'icon-small.png', size:29 },
-            { name:'icon-small-2x.png', size:58 },
-            { name:'icon-small-3x.png', size:87 },
+            { name: 'icon-small.png', size: 29 },
+            { name: 'icon-small-2x.png', size: 58 },
+            { name: 'icon-small-3x.png', size: 87 },
             // iPad Spotlight and Settings Icon -->
-            { name:'icon-50.png', size:50 },
-            { name:'icon-50-2x.png', size:100 },
-            { name:'icon-50-3x.png', size:150 },
+            { name: 'icon-50.png', size: 50 },
+            { name: 'icon-50-2x.png', size: 100 },
+            // iPad Pro
+            { name: 'icon-83.5-2x.png', size: 167 }
             // Other sizes -->
-            { name:'icon-48.png', size:48 },
-            { name:'icon-48-2x.png', size:96 },
-            { name:'icon-58.png', size:58 },
-            { name:'icon-58-2x.png', size:116 },
-            { name:'icon-58-3x.png', size:174 },
-            { name:'icon-64.png', size:64 },
-            { name:'icon-64-2x.png', size:128 },
-            { name:'icon-64-3x.png', size:192 },
-            { name:'icon-83.5.png', size:83.5 },
-            { name:'icon-83.5-2x.png', size:167 },
-            { name:'icon-320.png', size:320 },
+            // { name:'icon-50-3x.png', size:150 },
+            // { name:'icon-57-3x.png', size:171 },
+            // { name:'icon-72-3x.png', size:216 },
+            // { name:'icon-76-3x.png', size:228 },
+            // { name:'icon-48.png', size:48 },
+            // { name:'icon-48-2x.png', size:96 },
+            // { name:'icon-58.png', size:58 },
+            // { name:'icon-58-2x.png', size:116 },
+            // { name:'icon-58-3x.png', size:174 },
+            // { name:'icon-64.png', size:64 },
+            // { name:'icon-64-2x.png', size:128 },
+            // { name:'icon-64-3x.png', size:192 },
+            // { name:'icon-83.5.png', size:83.5 },
+            // { name:'icon-320.png', size:320 },
         ]
     });
 
@@ -73,12 +76,12 @@ var getPlatformIcons = function() {
         iconsPath: 'res/icons/android/',
         isAdded: true,
         icons: [
-            { name:'icon-36-ldpi.png', size: 36, density:'ldpi' },
-            { name:'icon-48-mdpi.png', size: 48, density:'mdpi' },
-            { name:'icon-72-hdpi.png', size: 72, density:'hdpi' },
-            { name:'icon-96-xhdpi.png', size: 96, density:'xhdpi' },
-            { name:'icon-144-xxhdpi.png', size: 144, density:'xxhdpi' },
-            { name:'icon-192-xxxhdpi.png', size: 192, density:'xxxhdpi' },
+            { name: 'icon-36-ldpi.png', size: 36, density: 'ldpi' },
+            { name: 'icon-48-mdpi.png', size: 48, density: 'mdpi' },
+            { name: 'icon-72-hdpi.png', size: 72, density: 'hdpi' },
+            { name: 'icon-96-xhdpi.png', size: 96, density: 'xhdpi' },
+            { name: 'icon-144-xxhdpi.png', size: 144, density: 'xxhdpi' },
+            { name: 'icon-192-xxxhdpi.png', size: 192, density: 'xxxhdpi' },
         ]
     });
 
@@ -99,17 +102,17 @@ var getPlatformIcons = function() {
         iconsPath: 'res/icons/windows/',
         isAdded: true,
         icons: [
-            { name:'Square150x150Logo.scale-100.png', size:150 },
-            { name:'Square150x150Logo.scale-240.png', size:360 },
-            { name:'Square30x30Logo.scale-100.png', size:30 },
-            { name:'Square310x310Logo.scale-100.png', size:310 },
-            { name:'Square44x44Logo.scale-240.png', size:106 },
-            { name:'Square70x70Logo.scale-100.png', size:70 },
-            { name:'Square71x71Logo.scale-240.png', size:170 },
-            { name:'StoreLogo.scale-100.png', size:50 },
-            { name:'StoreLogo.scale-240.png', size:120 },
-            { name:'Wide310x150Logo.scale-100.png', size:310 },
-            { name:'Wide310x150Logo.scale-240.png', size:744 },
+            { name: 'Square150x150Logo.scale-100.png', size: 150 },
+            { name: 'Square150x150Logo.scale-240.png', size: 360 },
+            { name: 'Square30x30Logo.scale-100.png', size: 30 },
+            { name: 'Square310x310Logo.scale-100.png', size: 310 },
+            { name: 'Square44x44Logo.scale-240.png', size: 106 },
+            { name: 'Square70x70Logo.scale-100.png', size: 70 },
+            { name: 'Square71x71Logo.scale-240.png', size: 170 },
+            { name: 'StoreLogo.scale-100.png', size: 50 },
+            { name: 'StoreLogo.scale-240.png', size: 120 },
+            { name: 'Wide310x150Logo.scale-100.png', size: 310 },
+            { name: 'Wide310x150Logo.scale-240.png', size: 744 },
         ]
     });
 
@@ -119,9 +122,9 @@ var getPlatformIcons = function() {
         iconsPath: 'store/icons/',
         isAdded: true,
         icons: [
-            { path:'./android/', name: "icon-512.png", size: 512 },
-            { path:'./wp8/', name: "icon-300.png", size: 300 },
-            { path:'./ios/', name: "icon-1024.jpg", size: 1024 } // App Store
+            { path: './android/', name: "icon-512.png", size: 512 },
+            { path: './wp8/', name: "icon-300.png", size: 300 },
+            { path: './ios/', name: "icon-1024.jpg", size: 1024 } // App Store
         ]
     });
 
@@ -137,7 +140,7 @@ var getPlatformIcons = function() {
  * @param  {String} projectName
  * @return {Promise} resolves with an array of platforms
  */
-var getPlatformSplashs = function() {
+var getPlatformSplashs = function () {
     var deferred = Q.defer();
     var platforms = [];
 
@@ -147,16 +150,18 @@ var getPlatformSplashs = function() {
         isAdded: true,
         splashPath: 'res/screens/ios/',
         splash: [
-            { name:"screen-iphone-portrait.png", width:320, height:480 },           // iPhone
-            { name:"screen-iphone-portrait-2x.png", width:640, height:960 },        // iPhone Retina
-            { name:"screen-ipad-portrait.png", width:768, height:1024 },            // iPad
-            { name:"screen-ipad-portrait-2x.png", width:1536, height:2048 },        // iPad Retina
-            { name:"screen-ipad-landscape.png", width:1024, height:768 },           // iPad
-            { name:"screen-ipad-landscape-2x.png", width:2048, height:1536 },       // iPad Retina
-            { name:"screen-iphone-568h-2x.png", width:640, height:1136 },           // iPhone 5 Retina
-            { name:"screen-iphone-portrait-667h.png", width:750, height:1334 },     // iPhone 6
-            { name:"screen-iphone-portrait-736h.png", width:1242, height:2208 },    // iPhone 6 Plus
-            { name:"screen-iphone-landscape-736h.png", width:2208, height:1242 },   // iPhone 6 Plus
+            { name: "screen-iphone-portrait.png", width: 320, height: 480 },           // iPhone
+            { name: "screen-iphone-portrait-2x.png", width: 640, height: 960 },        // iPhone Retina
+            { name: "screen-ipad-portrait.png", width: 768, height: 1024 },            // iPad
+            { name: "screen-ipad-portrait-2x.png", width: 1536, height: 2048 },        // iPad Retina
+            { name: "screen-ipad-landscape.png", width: 1024, height: 768 },           // iPad
+            { name: "screen-ipad-landscape-2x.png", width: 2048, height: 1536 },       // iPad Retina
+            { name: 'screen-ipad-landscape-ipadpro.png', width: 2732, height: 2048 }, // iPad Pro
+            { name: 'screen-ipad-portrait-ipadpro.png', width: 2048, height: 2732 }, // iPad Pro
+            { name: "screen-iphone-568h-2x.png", width: 640, height: 1136 },           // iPhone 5 Retina
+            { name: "screen-iphone-portrait-667h.png", width: 750, height: 1334 },     // iPhone 6
+            { name: "screen-iphone-portrait-736h.png", width: 1242, height: 2208 },    // iPhone 6 Plus
+            { name: "screen-iphone-landscape-736h.png", width: 2208, height: 1242 }    // iPhone 6 Plus
         ]
     });
 
@@ -166,18 +171,18 @@ var getPlatformSplashs = function() {
         isAdded: true,
         splashPath: 'res/screens/android/',
         splash: [
-            { name:"screen-ldpi-portrait.png", width: 320, height: 426, density:"port-ldpi" }, // 200x320
-            { name:"screen-ldpi-landscape.png", width: 426, height: 320, density:"land-ldpi" }, // 320x200
-            { name:"screen-hdpi-portrait.png", width: 480, height: 640, density:"port-hdpi" }, // 320x480
-            { name:"screen-hdpi-landscape.png", width: 640, height: 480, density:"land-hdpi" }, // 480x320
-            { name:"screen-mdpi-portrait.png", width: 320, height: 470, density:"port-mdpi" }, // 480x800
-            { name:"screen-mdpi-landscape.png", width: 470, height: 320, density:"land-mdpi" }, // 800x480
-            { name:"screen-xhdpi-portrait.png", width: 720, height: 960, density:"port-xhdpi" }, // 720x1280
-            { name:"screen-xhdpi-landscape.png", width: 960, height: 720, density:"land-xhdpi" }, // 1280x720
-            { name:"screen-xxhdpi-portrait.png", width: 960, height: 1600, density:"port-xxhdpi" }, // 960x1600
-            { name:"screen-xxhdpi-landscape.png", width: 1600, height: 960, density:"land-xxhdpi" }, // 1600x960
-            { name:"screen-xxxhdpi-portrait.png", width: 1280, height: 1920, density:"port-xxhdpi" }, // 1280x1920
-            { name:"screen-xxxhdpi-landscape.png", width: 1920, height: 1280, density:"land-xxhdpi" } // 1920x1280
+            { name: "screen-ldpi-portrait.png", width: 320, height: 426, density: "port-ldpi" }, // 200x320
+            { name: "screen-ldpi-landscape.png", width: 426, height: 320, density: "land-ldpi" }, // 320x200
+            { name: "screen-hdpi-portrait.png", width: 480, height: 640, density: "port-hdpi" }, // 320x480
+            { name: "screen-hdpi-landscape.png", width: 640, height: 480, density: "land-hdpi" }, // 480x320
+            { name: "screen-mdpi-portrait.png", width: 320, height: 470, density: "port-mdpi" }, // 480x800
+            { name: "screen-mdpi-landscape.png", width: 470, height: 320, density: "land-mdpi" }, // 800x480
+            { name: "screen-xhdpi-portrait.png", width: 720, height: 960, density: "port-xhdpi" }, // 720x1280
+            { name: "screen-xhdpi-landscape.png", width: 960, height: 720, density: "land-xhdpi" }, // 1280x720
+            { name: "screen-xxhdpi-portrait.png", width: 960, height: 1600, density: "port-xxhdpi" }, // 960x1600
+            { name: "screen-xxhdpi-landscape.png", width: 1600, height: 960, density: "land-xxhdpi" }, // 1600x960
+            { name: "screen-xxxhdpi-portrait.png", width: 1280, height: 1920, density: "port-xxhdpi" }, // 1280x1920
+            { name: "screen-xxxhdpi-landscape.png", width: 1920, height: 1280, density: "land-xxhdpi" } // 1920x1280
         ]
     });
 
@@ -188,10 +193,10 @@ var getPlatformSplashs = function() {
         isAdded: true,
         splashPath: 'res/screens/wp8/',
         splash: [
-            { width: 768, height: 1280, name:"SplashScreenImage.jpg" },
-            { width: 480, height: 800, name:"SplashScreenImage.screen-WVGA.jpg" },
-            { width: 768, height: 1280, name:"SplashScreenImage.screen-WXGA.jpg" },
-            { width: 720, height: 1280, name:"SplashScreenImage.screen-720p.jpg" }
+            { width: 768, height: 1280, name: "SplashScreenImage.jpg" },
+            { width: 480, height: 800, name: "SplashScreenImage.screen-WVGA.jpg" },
+            { width: 768, height: 1280, name: "SplashScreenImage.screen-WXGA.jpg" },
+            { width: 720, height: 1280, name: "SplashScreenImage.screen-720p.jpg" }
         ]
     });
 
@@ -201,9 +206,9 @@ var getPlatformSplashs = function() {
         isAdded: true,
         splashPath: 'res/screens/windows/',
         splash: [
-            { width:620, height:300, name:"SplashScreen.scale-100.png" },
-            { width:1152, height:1920, name:"SplashScreen.scale-240.png" },
-            { width:1152, height:1920, name:"SplashScreenPhone.scale-240.png" },
+            { width: 620, height: 300, name: "SplashScreen.scale-100.png" },
+            { width: 1152, height: 1920, name: "SplashScreen.scale-240.png" },
+            { width: 1152, height: 1920, name: "SplashScreenPhone.scale-240.png" },
         ]
     });
 
@@ -234,15 +239,15 @@ settings.SPLASH_FILE = path.join('model', 'splash.png');
  * @var {Object} console utils
  */
 var display = {};
-display.success = function(str) {
+display.success = function (str) {
     str = '✓  '.green + str;
     console.log('  ' + str);
 };
-display.error = function(str) {
+display.error = function (str) {
     str = '✗  '.red + str;
     console.log('  ' + str);
 };
-display.header = function(str) {
+display.header = function (str) {
     console.log('');
     console.log(' ' + str.cyan.underline);
     console.log('');
@@ -255,7 +260,7 @@ display.header = function(str) {
  * @param  {Object} icon
  * @return {Promise}
  */
-var generateIcon = function(platform, icon) {
+var generateIcon = function (platform, icon) {
     var deferred = Q.defer();
     try {
         var filePath = path.join(platform.iconsPath, icon.name);
@@ -270,7 +275,7 @@ var generateIcon = function(platform, icon) {
             format: icon.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
             width: icon.size,
             height: icon.size,
-        }, function(err, stdout, stderr) {
+        }, function (err, stdout, stderr) {
             if (err) {
                 deferred.reject(err);
             } else {
@@ -290,17 +295,17 @@ var generateIcon = function(platform, icon) {
  * @param  {Object} platform
  * @return {Promise}
  */
-var generateIconsForPlatform = function(platform) {
+var generateIconsForPlatform = function (platform) {
     var deferred = Q.defer();
     display.header('Generating Icons for ' + platform.name);
     var all = [];
     var icons = platform.icons;
-    icons.forEach(function(icon) {
+    icons.forEach(function (icon) {
         all.push(generateIcon(platform, icon));
     });
-    Q.all(all).then(function() {
+    Q.all(all).then(function () {
         deferred.resolve();
-    }).catch(function(err) {
+    }).catch(function (err) {
         console.log(err);
     });
     return deferred.promise;
@@ -312,19 +317,19 @@ var generateIconsForPlatform = function(platform) {
  * @param  {Array} platforms
  * @return {Promise}
  */
-var generateIcons = function(platforms) {
+var generateIcons = function (platforms) {
     var deferred = Q.defer();
     var sequence = Q();
     var all = [];
     _(platforms).where({
         isAdded: true
-    }).forEach(function(platform) {
-        sequence = sequence.then(function() {
+    }).forEach(function (platform) {
+        sequence = sequence.then(function () {
             return generateIconsForPlatform(platform);
         });
         all.push(sequence);
     });
-    Q.all(all).then(function() {
+    Q.all(all).then(function () {
         deferred.resolve();
     });
     return deferred.promise;
@@ -336,9 +341,9 @@ var generateIcons = function(platforms) {
  *
  * @return {Promise} resolves if exists, rejects otherwise
  */
-var validIconExists = function() {
+var validIconExists = function () {
     var deferred = Q.defer();
-    fs.exists(settings.ICON_FILE, function(exists) {
+    fs.exists(settings.ICON_FILE, function (exists) {
         if (exists) {
             display.success(settings.ICON_FILE + ' exists');
             deferred.resolve(true);
@@ -358,7 +363,7 @@ var validIconExists = function() {
  * @param  {Object} splash
  * @return {Promise}
  */
-var generateSplash = function(platform, splash) {
+var generateSplash = function (platform, splash) {
     var deferred = Q.defer();
     try {
         var filePath = path.join(platform.splashPath, splash.name);
@@ -373,7 +378,7 @@ var generateSplash = function(platform, splash) {
             format: splash.name.replace(/.*\.(\w+)$/i, '$1').toLowerCase(),
             width: splash.width,
             height: splash.height,
-        }, function(err, stdout, stderr) {
+        }, function (err, stdout, stderr) {
             if (err) {
                 deferred.reject(err);
             } else {
@@ -393,17 +398,17 @@ var generateSplash = function(platform, splash) {
  * @param  {Object} platform
  * @return {Promise}
  */
-var generateSplashForPlatform = function(platform) {
+var generateSplashForPlatform = function (platform) {
     var deferred = Q.defer();
     display.header('Generating splash screen for ' + platform.name);
     var all = [];
     var splashes = platform.splash;
-    splashes.forEach(function(splash) {
+    splashes.forEach(function (splash) {
         all.push(generateSplash(platform, splash));
     });
-    Q.all(all).then(function() {
+    Q.all(all).then(function () {
         deferred.resolve();
-    }).catch(function(err) {
+    }).catch(function (err) {
         console.log(err);
     });
     return deferred.promise;
@@ -415,19 +420,19 @@ var generateSplashForPlatform = function(platform) {
  * @param  {Array} platforms
  * @return {Promise}
  */
-var generateSplashes = function(platforms) {
+var generateSplashes = function (platforms) {
     var deferred = Q.defer();
     var sequence = Q();
     var all = [];
     _(platforms).where({
         isAdded: true
-    }).forEach(function(platform) {
-        sequence = sequence.then(function() {
+    }).forEach(function (platform) {
+        sequence = sequence.then(function () {
             return generateSplashForPlatform(platform);
         });
         all.push(sequence);
     });
-    Q.all(all).then(function() {
+    Q.all(all).then(function () {
         deferred.resolve();
     });
     return deferred.promise;
@@ -437,9 +442,9 @@ var generateSplashes = function(platforms) {
  *
  * @return {Promise} resolves if exists, rejects otherwise
  */
-var validSplashExists = function() {
+var validSplashExists = function () {
     var deferred = Q.defer();
-    fs.exists(settings.SPLASH_FILE, function(exists) {
+    fs.exists(settings.SPLASH_FILE, function (exists) {
         if (exists) {
             display.success(settings.SPLASH_FILE + ' exists');
             deferred.resolve(true);
@@ -456,7 +461,7 @@ function generate(options) {
     settings = options || settings;
     display.header('Checking Splash & Icon');
     return Q.all([validIconExists(), validSplashExists()])
-        .then(function(results) {
+        .then(function (results) {
             var hasIcon = results[0] === true;
             var hasSplash = results[1] === true;
             var promise;
@@ -480,11 +485,11 @@ function generate(options) {
 
             return Q.when(promise);
         })
-        .catch(function(err) {
+        .catch(function (err) {
             if (err) {
                 console.log(err);
             }
-        }).then(function() {
+        }).then(function () {
             console.log('');
         });
 }

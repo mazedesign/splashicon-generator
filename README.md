@@ -18,13 +18,24 @@ Create an ```icon.png``` and a ```splash.png``` file in a 'model' folder under t
 
      $ splashicon-generator
 
-For optimal results, your icon file has to be square, and at least 1024x1024px and your splash file has a vertical rectangle, and at least 2208x3925px.
-
 You can change the default folder for the base images using the argument `imagespath`. Consider the following example:
 
      $ splashicon-generator --imagespath="project/assets"
 
 This will look for an ```icon.png``` and a ```splash.png``` in the **project/assets** folder under the root folder of your cordova project.
+
+### Model 
+
+Use the Photoshop templates provided in the model folder to generate the PNG files.
+
+### Icon
+
+Should be a 1024x1024px with a 5% margin.
+
+#### Splash
+
+Your splash must be 2732x2732px as it now is the largest resolution (used by iPad Pro 12.9"), and the artwork should fit a center square (1200x1200px).
+This Photoshop splash screen template provides the recommended size and guidelines of the artwork’s safe zone.
 
 ---
 
@@ -58,38 +69,24 @@ Include in your ```config.xml``` file:
     <icon density="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png" />
 </platform>
 <platform name="ios">
-    <icon height="180" src="res/icons/ios/icon-60-3x.png" width="180" />
-    <icon height="60" src="res/icons/ios/icon-60.png" width="60" />
-    <icon height="120" src="res/icons/ios/icon-60-2x.png" width="120" />
-    <icon height="76" src="res/icons/ios/icon-76.png" width="76" />
-    <icon height="152" src="res/icons/ios/icon-76-2x.png" width="152" />
-    <icon height="228" src="res/icons/ios/icon-76-3x.png" width="228" />
-    <icon height="40" src="res/icons/ios/icon-40.png" width="40" />
-    <icon height="80" src="res/icons/ios/icon-40-2x.png" width="80" />
-    <icon height="120" src="res/icons/ios/icon-40-3x.png" width="120" />
-    <icon height="57" src="res/icons/ios/icon-57.png" width="57" />
-    <icon height="114" src="res/icons/ios/icon-57-2x.png" width="114" />
-    <icon height="171" src="res/icons/ios/icon-57-3x.png" width="171" />
-    <icon height="72" src="res/icons/ios/icon-72.png" width="72" />
-    <icon height="144" src="res/icons/ios/icon-72-2x.png" width="144" />
-    <icon height="216" src="res/icons/ios/icon-72-3x.png" width="216" />
     <icon height="29" src="res/icons/ios/icon-small.png" width="29" />
     <icon height="58" src="res/icons/ios/icon-small-2x.png" width="58" />
     <icon height="87" src="res/icons/ios/icon-small-3x.png" width="87" />
+    <icon height="40" src="res/icons/ios/icon-40.png" width="40" />
+    <icon height="80" src="res/icons/ios/icon-40-2x.png" width="80" />
+    <icon height="120" src="res/icons/ios/icon-40-3x.png" width="120" />
     <icon height="50" src="res/icons/ios/icon-50.png" width="50" />
     <icon height="100" src="res/icons/ios/icon-50-2x.png" width="100" />
-    <icon height="150" src="res/icons/ios/icon-50-3x.png" width="150" />
-    <icon height="48" src="res/icons/ios/icon-48.png" width="48" />
-    <icon height="96" src="res/icons/ios/icon-48-2x.png" width="96" />
-    <icon height="58" src="res/icons/ios/icon-58.png" width="58" />
-    <icon height="116" src="res/icons/ios/icon-58-2x.png" width="116" />
-    <icon height="174" src="res/icons/ios/icon-58-3x.png" width="174" />
-    <icon height="64" src="res/icons/ios/icon-64.png" width="64" />
-    <icon height="128" src="res/icons/ios/icon-64-2x.png" width="128" />
-    <icon height="192" src="res/icons/ios/icon-64-3x.png" width="192" />
-    <icon height="83.5" src="res/icons/ios/icon-83.5.png" width="83.5" />
+    <icon height="57" src="res/icons/ios/icon-57.png" width="57" />
+    <icon height="114" src="res/icons/ios/icon-57-2x.png" width="114" />
+    <icon height="60" src="res/icons/ios/icon-60.png" width="60" />
+    <icon height="120" src="res/icons/ios/icon-60-2x.png" width="120" />
+    <icon height="180" src="res/icons/ios/icon-60-3x.png" width="180" />
+    <icon height="72" src="res/icons/ios/icon-72.png" width="72" />
+    <icon height="144" src="res/icons/ios/icon-72-2x.png" width="144" />
+    <icon height="76" src="res/icons/ios/icon-76.png" width="76" />
+    <icon height="152" src="res/icons/ios/icon-76-2x.png" width="152" />
     <icon height="167" src="res/icons/ios/icon-83.5-2x.png" width="167" />
-    <icon height="320" src="res/icons/ios/icon-320.png" width="320" />
 </platform>
 <platform name="windows">
     <icon height="150" src="res/icons/windows/Square150x150Logo.scale-100.png" width="150" />
@@ -117,6 +114,7 @@ Include in your ```config.xml``` file:
 Include in your ```config.xml``` file:
 
 ```xml
+<preference name="SplashScreen" value="screen"/>
 <platform name="android">
     <splash density="land-hdpi" src="res/screens/android/screen-hdpi-landscape.png" />
     <splash density="land-ldpi" src="res/screens/android/screen-ldpi-landscape.png" />
@@ -132,29 +130,36 @@ Include in your ```config.xml``` file:
     <splash density="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />
 </platform>
 <platform name="ios">
-    <splash height="480" src="res/screens/ios/screen-iphone-portrait.png" width="320" />
-    <splash height="960" src="res/screens/ios/screen-iphone-portrait-2x.png" width="640" />
-    <splash height="1024" src="res/screens/ios/screen-ipad-portrait.png" width="768" />
-    <splash height="2048" src="res/screens/ios/screen-ipad-portrait-2x.png" width="1536" />
-    <splash height="768" src="res/screens/ios/screen-ipad-landscape.png" width="1024" />
-    <splash height="1536" src="res/screens/ios/screen-ipad-landscape-2x.png" width="2048" />
-    <splash height="1136" src="res/screens/ios/screen-iphone-568h-2x.png" width="640" />
-    <splash height="1334" src="res/screens/ios/screen-iphone-portrait-667h.png" width="750" />
-    <splash height="2208" src="res/screens/ios/screen-iphone-portrait-736h.png" width="1242" />
-    <splash height="1242" src="res/screens/ios/screen-iphone-landscape-736h.png" width="2208" />
+    <splash width="640" height="1136" src="res/screens/ios/screen-iphone-568h-2x.png" />
+    <splash width="320" height="480" src="res/screens/ios/screen-iphone-portrait.png" />
+    <splash width="640" height="960" src="res/screens/ios/screen-iphone-portrait-2x.png" />
+    <splash width="750" height="1334" src="res/screens/ios/screen-iphone-portrait-667h.png" />
+    <splash width="1242" height="2208" src="res/screens/ios/screen-iphone-portrait-736h.png" />
+    <splash width="2208" height="1242" src="res/screens/ios/screen-iphone-landscape-736h.png" />
+    <splash width="768" height="1024" src="res/screens/ios/screen-ipad-portrait.png" />
+    <splash width="1536" height="2048" src="res/screens/ios/screen-ipad-portrait-2x.png" />
+    <splash width="1024" height="768" src="res/screens/ios/screen-ipad-landscape.png" />
+    <splash width="2048" height="1536" src="res/screens/ios/screen-ipad-landscape-2x.png" />
+    <splash width="2732" height="2048" src="res/screens/ios/screen-ipad-landscape-ipadpro.png" />
+    <splash width="2048" height="2732" src="res/screens/ios/screen-ipad-portrait-ipadpro.png" />
 </platform>
 <platform name="windows">
-    <splash height="300" src="res/screens/windows/SplashScreen.scale-100.png" width="620" />
-    <splash height="1920" src="res/screens/windows/SplashScreen.scale-240.png" width="1152" />
-    <splash height="1920" src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" />
+    <splash width="620" height="300" src="res/screens/windows/SplashScreen.scale-100.png" />
+    <splash width="1152" height="1920" src="res/screens/windows/SplashScreen.scale-240.png" />
+    <splash width="1152" height="1920" src="res/screens/windows/SplashScreenPhone.scale-240.png" />
 </platform>
 <platform name="wp8">
-    <splash height="1280" src="res/screens/wp8/SplashScreenImage.jpg" width="768" />
-    <splash height="1280" src="res/screens/wp8/SplashScreenImage.screen-720p.jpg" width="720" />
-    <splash height="800" src="res/screens/wp8/SplashScreenImage.screen-WVGA.jpg" width="480" />
-    <splash height="1280" src="res/screens/wp8/SplashScreenImage.screen-WXGA.jpg" width="768" />
+    <splash width="768" height="1280" src="res/screens/wp8/SplashScreenImage.jpg" />
+    <splash width="720" height="1280" src="res/screens/wp8/SplashScreenImage.screen-720p.jpg" />
+    <splash width="480" height="800" src="res/screens/wp8/SplashScreenImage.screen-WVGA.jpg" />
+    <splash width="768" height="1280" src="res/screens/wp8/SplashScreenImage.screen-WXGA.jpg" />
 </platform>
 ```
+
+**Notes**:
+
+With new versions of the Cordova you may want to use the config `<preference name="SplashMaintainAspectRatio" value="true" />` to avoid distorted images on android.
+More info on [cordova-plugin-splashscreen](https://github.com/apache/cordova-plugin-splashscreen).
 
 ---
 
@@ -218,6 +223,12 @@ Then just add it to the `config.xml`:
     <icon density="xxxhdpi" src="res/icons/android/push-icon-192-xxxhdpi.png" />
 </platform>
 ```
+
+---
+
+### References
+
+- [iOS Human Interface Guidelines - Graphics](https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/)
 
 ---
 
