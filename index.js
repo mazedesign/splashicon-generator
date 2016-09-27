@@ -87,17 +87,6 @@ var getPlatformIcons = function () {
 
     //ok
     platforms.push({
-        name: 'wp8',
-        iconsPath: 'res/icons/wp8/',
-        isAdded: true,
-        icons: [
-            { name: 'ApplicationIcon.png', size: 99 },
-            { name: 'Background.png', size: 159 },
-        ]
-    });
-
-    //ok
-    platforms.push({
         name: 'windows',
         iconsPath: 'res/icons/windows/',
         isAdded: true,
@@ -123,7 +112,6 @@ var getPlatformIcons = function () {
         isAdded: true,
         icons: [
             { path: './android/', name: "icon-512.png", size: 512 },
-            { path: './wp8/', name: "icon-300.png", size: 300 },
             { path: './ios/', name: "icon-1024.jpg", size: 1024 } // App Store
         ]
     });
@@ -183,20 +171,6 @@ var getPlatformSplashs = function () {
             { name: "screen-xxhdpi-landscape.png", width: 1600, height: 960, density: "land-xxhdpi" }, // 1600x960
             { name: "screen-xxxhdpi-portrait.png", width: 1280, height: 1920, density: "port-xxhdpi" }, // 1280x1920
             { name: "screen-xxxhdpi-landscape.png", width: 1920, height: 1280, density: "land-xxhdpi" } // 1920x1280
-        ]
-    });
-
-    //ok
-    // https://msdn.microsoft.com/en-us/library/windows/apps/ff769511(v=vs.105).aspx
-    platforms.push({
-        name: 'wp8',
-        isAdded: true,
-        splashPath: 'res/screens/wp8/',
-        splash: [
-            { width: 768, height: 1280, name: "SplashScreenImage.jpg" },
-            { width: 480, height: 800, name: "SplashScreenImage.screen-WVGA.jpg" },
-            { width: 768, height: 1280, name: "SplashScreenImage.screen-WXGA.jpg" },
-            { width: 720, height: 1280, name: "SplashScreenImage.screen-720p.jpg" }
         ]
     });
 
