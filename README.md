@@ -2,7 +2,7 @@
 
 # splashicon-generator
 
-Automatic icon and splash screen resizing for any **Cordova** based applications including **PhoneGap**. It uses an ```icon.png``` and a ```splash.png``` to automatically resize and copy it for all the platforms your project supports (currently works with **iOS**, **Android** and **Windows Phone 8**).
+Automatic icon and splash screen resizing for any **Cordova** based applications including **PhoneGap**. It uses an ```icon.png``` and a ```splash.png``` to automatically resize and copy it for all the platforms your project supports (currently works with **iOS**, **Android** and **Windows 8.x**).
 
 Consider using the base icon and splash images in the `model` folder, so that images are not cropped and resized incorrectly.
 
@@ -111,10 +111,6 @@ Include in your ```config.xml``` file:
     <icon height="150" src="res/icons/windows/Wide310x150Logo.scale-100.png" width="310" />
     <icon height="360" src="res/icons/windows/Wide310x150Logo.scale-240.png" width="744" />
 </platform>
-<platform name="wp8">
-    <icon height="99" src="res/icons/wp8/ApplicationIcon.png" width="99" />
-    <icon height="159" src="res/icons/wp8/Background.png" width="159" />
-</platform>
 ```
 
 ---
@@ -157,12 +153,6 @@ Include in your ```config.xml``` file:
     <splash width="620" height="300" src="res/screens/windows/SplashScreen.scale-100.png" />
     <splash width="1152" height="1920" src="res/screens/windows/SplashScreen.scale-240.png" />
     <splash width="1152" height="1920" src="res/screens/windows/SplashScreenPhone.scale-240.png" />
-</platform>
-<platform name="wp8">
-    <splash width="768" height="1280" src="res/screens/wp8/SplashScreenImage.jpg" />
-    <splash width="720" height="1280" src="res/screens/wp8/SplashScreenImage.screen-720p.jpg" />
-    <splash width="480" height="800" src="res/screens/wp8/SplashScreenImage.screen-WVGA.jpg" />
-    <splash width="768" height="1280" src="res/screens/wp8/SplashScreenImage.screen-WXGA.jpg" />
 </platform>
 ```
 
