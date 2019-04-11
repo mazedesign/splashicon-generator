@@ -68,6 +68,11 @@ var getPlatformIcons = function () {
             { name:'icon-83.5.png', size:83.5 },
             { name:'icon-320.png', size:320 },
             { name:'icon-1024.png', size:1024 },
+            // other shit
+            { name:'icon-20.png', size:20},
+            //{name:'AppIcon27.5x27.5@2x.png', size:196},
+            {name:'AppIcon86x86@2x.png', size:172},
+            {name:'AppIcon98x98@2x.png', size:196},
         ]
     });
 
@@ -163,7 +168,9 @@ var getPlatformSplashs = function () {
             { name: "screen-iphone-portrait-667h.png", width: 750, height: 1334 },     // iPhone 6
             { name: "screen-iphone-portrait-736h.png", width: 1242, height: 2208 },    // iPhone 6 Plus
             { name: "screen-iphone-landscape-736h.png", width: 2208, height: 1242 },   // iPhone 6 Plus
-            { name: "Default@2x~universal~anyany.png", width: 2732, height: 2732}      // Universal storyboard
+            { name: "Default@2x~universal~anyany.png", width: 2732, height: 2732},      // Universal storyboard
+            { name: "Default-2436h.png", width: 1125, height: 2436},      // iPhone X
+            { name: "Default-Landscape-2436h.png", width: 2436, height: 1125}      // iPhone X
         ]
     });
 
